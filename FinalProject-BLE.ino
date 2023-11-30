@@ -46,13 +46,14 @@ void loop() {
   a0Val = analogRead(A0);
   d2Val = digitalRead(2);
 
-  // calculate if d2 was pressed, released, clicked, etc
+  // calculate if d2 was clicked
   if (d2Val && d2Val != prevD2Val) {
     d2ClickCount++;
   }
 
   prevD2Val = d2Val;
 
+  // BLE code
   updateData();
   delay(2);
 }
